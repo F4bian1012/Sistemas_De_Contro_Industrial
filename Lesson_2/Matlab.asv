@@ -103,7 +103,7 @@ else
 end
 
 
-%% Gráficas de funciones continuas en Matlab
+%% Gráficas de funciones continu
 
 x = 0:0.1:10;
 y = sin(x);
@@ -113,23 +113,22 @@ plot(x, y);
 title('Gráfica de y = sin(x)');
 xlabel('x');
 ylabel('y');
-hold on
-%% Gráficas de funciones discretas en Matlab
-x = 1:10;
-% Vector eje y
-y = sin(x);
+%%
+x = 1:7;
+% Vector de ventas para cada día (eje y)
+y = [15, 22, 18, 25, 30, 28, 12];
 % Crea una nueva figura para la gráfica
-%figure;
+figure;
 % Utiliza stem() para graficar datos discretos
 stem(x, y, 'filled', 'LineWidth', 1.5);
-title('Gráfica discreta');
-xlabel('x');
-ylabel('y');
+
 %%  CONTROL
 % G(s) = 10 / (s^2 + 2s + 10)
 num = [10]; % Numerador
 den = [1 2 10]; % Denominador
 G = tf(num, den)
+
+
 %%
 % Respuesta al escalón de la función de transferencia
 step(G);
