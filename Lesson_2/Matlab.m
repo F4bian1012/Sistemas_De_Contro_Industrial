@@ -1,7 +1,8 @@
 %% BASICS
 % Creación de variables
 a = 5;
-b = 10;
+b = 10
+%%
 % Operaciones
 suma = a + b;
 % Resta
@@ -37,10 +38,10 @@ potencia = a^2; % 100
 fila = [1, 2, 3, 4, 5];
 % Crear un vector columna
 columna = [1; 2; 3; 4; 5];
-
+%%
 % Crear un vector con un rango de valores
-rango = 1:0.5:10;
-
+rango = 1:0.5:10
+%%
 % Crear un vector con valores espaciados uniformemente
 espaciado = linspace(0, 1, 5); % 5 valores entre 0 y 1
 disp(fila)
@@ -105,10 +106,10 @@ end
 
 %% Gráficas de funciones continuas en Matlab
 
-x = 0:0.1:10;
+x = 0:0.001:10;
 y = sin(x);
 % Gráfica
-figure;
+figure(1);
 plot(x, y);
 title('Gráfica de y = sin(x)');
 xlabel('x');
@@ -125,6 +126,7 @@ stem(x, y, 'filled', 'LineWidth', 1.5);
 title('Gráfica discreta');
 xlabel('x');
 ylabel('y');
+
 %%  CONTROL
 % G(s) = 10 / (s^2 + 2s + 10)
 num = [10]; % Numerador
