@@ -1,0 +1,29 @@
+
+fs = 1000;              % Frecuencia de muestreo en Hz
+t = 0:1/fs:.2;          % Vector de tiempo de 0 a 1 segundo
+f = 5;                  % Frecuencia de la señal en Hz
+noise=0;
+%noise = 0.0001 * randn(size(t));  % Ruido blanco gaussiano
+signal = 0.001*sin(2 * pi * f * t)+noise;
+
+amplifications = [1,5000];
+%inv_amplifications = [1,-50];
+num_amplifications = length(amplifications);
+
+figure;
+hold on;
+
+plot(t, signal, 'k', 'LineWidth', 1.5); 
+for i = 1:num_amplifications
+    amplified_signal = amplifications(i) * signal; 
+    plot(t, amplified_signal, 'DisplayName', ['Amplificación x' num2str(amplifications(i))]);
+end
+
+
+title('Ejemplo de Amplificaciones de Señales');
+xlabel('Tiempo (s)');
+ylabel('Amplitud [V]');
+legend show;
+grid on;
+hold off;
+
