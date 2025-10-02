@@ -7,7 +7,7 @@ f1 = 1; % Frecuencia fundamental en Hz
 f2 = 2; % Segunda armónica en Hz
 f3 = 3; % Tercera armónica en Hz
 noise =0;
-noise = 0.01 * randn(size(t));  % Ruido blanco gaussiano
+%noise = 0.01 * randn(size(t));  % Ruido blanco gaussiano
 
 heart_signal = 0.05*sin(2*pi*f1*t) + 0.03*sin(2*pi*f2*t) + 0.01*sin(2*pi*f3*t)+noise;
 
@@ -24,6 +24,7 @@ plot(t, heart_signal_amplified);
 title('Señal del Corazón Amplificada');
 
 grid on;
+
 
 
 
