@@ -24,8 +24,8 @@ title('Señal del Corazón Amplificada');
 
 grid on;
 
-order = 2; %<-- cambie el orden del filtro
-fc = 2; 
+order = 8; %<-- cambie el orden del filtro
+fc = 5; 
 Wn = fc / (fs/2); 
 "a continuación se muestran los coeficientes de la función de transferencia del filtro"
 [b, a] = butter(order, Wn, 'low') %<---high
@@ -41,4 +41,4 @@ ylabel('Amplitud');
 legend('Señal Amplificada con Ruido', 'Señal Filtrada');
 grid on;
 
-%filterAnalyzer(b,a)
+filterAnalyzer(b,a)
